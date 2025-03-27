@@ -1,10 +1,7 @@
 import 'dart:io';
 
 void main() {
-  List<List<String>> theaterSeats = List.generate(
-    5,
-    (_) => List.filled(5, 'E'),
-  );
+  List<List<String>> theaterSeats = List.generate(5,(_) => List.filled(5, 'E'),);
   Map<String, String> bookings = {};
 
   print("Welcome To Our Theater");
@@ -31,12 +28,7 @@ void main() {
           int? row = int.parse(rowInput!);
           int? col = int.parse(colInput!);
 
-          if (row == null ||
-              col == null ||
-              row < 1 ||
-              row > 5 ||
-              col < 1 ||
-              col > 5) {
+          if (row == null ||col == null ||row < 1 ||row > 5 ||col < 1 ||col > 5) {
             print("\nInvalid input! Please enter numbers between 1 and 5.");
             continue;
           }
